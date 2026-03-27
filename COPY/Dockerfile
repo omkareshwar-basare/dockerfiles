@@ -4,4 +4,5 @@
 #It is a good practice to use COPY instruction in a Dockerfile to copy the files which are required by the application running inside the container.
 
 FROM nginx
-COPY index.html /usr/share/nginx/html/index.html
+RUN rm -rf /usr/share/nginx/html/*
+COPY index.html /usr/share/nginx/html
